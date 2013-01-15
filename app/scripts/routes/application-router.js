@@ -1,4 +1,9 @@
-define(['backbone','views/header-view','models/cv-model'], function (Backbone,HeaderView,CvModel) {
+define(function(require) {
+  var Backbone = require('backbone'),
+      HeaderView = require('views/header-view'),
+      PersonView = require('views/person-view'),
+      CvModel = require('models/cv-model'),
+      PersonModel = require('models/person-model');
     
   var ApplicationRouter = Backbone.Router.extend({
     router: {
@@ -15,8 +20,11 @@ define(['backbone','views/header-view','models/cv-model'], function (Backbone,He
     },
     loadCv: function(model,options) {
       model.fetchRelated('person');
-      var headerView = new HeaderView({model: model.get('person')});
+      var headerView = new HeaderView({model: model});
+      var personView = new PersonView({model: model.get('person')});
       $('#header').html(headerView.render().el);
+      $('#header').append(personView.render().el);
+      console.log(model);
     },
 
     home: function() {

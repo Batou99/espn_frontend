@@ -7,6 +7,7 @@ define(function(require) {
       name: 'Unknown',
       surname: 'Unknown',
       email: 'unknown@none.com',
+      profile: '',
       skills: {},
       languages: {},
       jobs: {}

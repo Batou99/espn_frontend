@@ -2,6 +2,7 @@
   "_id": 1,
   "name": "Lorenzo",
   "surname": "Lopez-Sancho",
-  "email": "lorenzo.lopez@intec.es"
+  "email": "lorenzo.lopez@intec.es",
+  "profile": "Software developer and architect. Specialist in J2EE and Ruby on Rails. Deep knowledge in development, databases and systems administration."
 }
 

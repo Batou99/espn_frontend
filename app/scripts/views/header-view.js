@@ -11,9 +11,6 @@ define(function(require) {
     initialize: function() {
       _.bindAll(this,"render");
       this.model.bind("change", this.render)
-      //this.model.fetchRelated('person');
-      //this.model.get('person').bind("change", this.render)
-      //this.template = _.template( template, {model: JSON.stringify(this.model.attributes)});
     },
 
     render: function() {
