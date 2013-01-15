@@ -1,14 +1,20 @@
-window.cvApp = {
-  Models: {},
-  Collections: {},
-  Views: {},
-  Routers: {},
-  init: function() {
-    console.log('Hello from Backbone!');
-    var router = new cvApp.Routers.ApplicationRouter();
+requirejs.config({
+  baseUrl: 'scripts',
+  paths: {
+    app: 'app',
+    jquery: 'vendor/jquery.min',
+    underscore: '/components/underscore-amd/underscore',
+    backbone: '/components/backbone-amd/backbone',
+    'backbone-relational': '/components/backbone-relational/backbone-relational',
+    text: '/components/requirejs-text/text'
   }
-};
 
-$(document).ready(function(){
-  cvApp.init();
 });
+
+require(['app'], function(app) {
+  app.initialize();
+  }
+);
+
+
+

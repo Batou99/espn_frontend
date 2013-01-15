@@ -13,77 +13,65 @@
 
 </head>
 <body>
-<div class="container-narrow">
+  <div class="container-narrow">
 
-  <div id="header"></div>
+    <div id="header"></div>
 
-  <hr>
+    <hr>
 
-  <div class="jumbotron">
-    <h1>Super awesome marketing speak!</h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <a class="btn btn-large btn-success" href="#">Sign up today</a>
-  </div>
-
-  <hr>
-
-  <div class="row-fluid marketing">
-    <div class="span6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <div class="jumbotron">
+      <h1>Super awesome marketing speak!</h1>
+      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <a class="btn btn-large btn-success" href="#">Sign up today</a>
     </div>
 
-    <div class="span6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    <hr>
 
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+    <div class="row-fluid marketing">
+      <div class="span6">
+        <h4>Subheading</h4>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <h4>Subheading</h4>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+        <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
+
+      <div class="span6">
+        <h4>Subheading</h4>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        <h4>Subheading</h4>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+        <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
     </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  <div class="footer">
-    <p>&copy; Company 2012</p>
-  </div>
+    <div class="footer">
+      <p>&copy; Company 2012</p>
+    </div>
 
-</div> <!-- /container -->
-<!--[if lt IE 7]>
+  </div> <!-- /container -->
+  <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-<!-- Add your site or application content here -->
+  <!-- Add your site or application content here -->
+  <script src="components/requirejs/require.js"></script>
+  <script src="scripts/main.js"></script>
 
-<!-- build:js scripts/scripts.js -->
-<script src="scripts/vendor/ejs.js"></script>
-<script src="scripts/vendor/jquery.min.js"></script>
-<script src="scripts/vendor/lodash.min.js"></script>
-<script src="scripts/vendor/backbone-min.js"></script>
-<script src="components/backbone-relational/backbone-relational.js"></script>
-<script src="scripts/main.js"></script>
-<script src="scripts/views/header-view.js"></script>
-<script src="scripts/views/cv-view.js"></script>
-<script src="scripts/models/person-model.js"></script>
-<script src="scripts/models/cv-model.js"></script>
-<script src="scripts/routes/application-router.js"></script>
-<!-- endbuild -->
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
- g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
- s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+     s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>
