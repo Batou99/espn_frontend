@@ -1,4 +1,6 @@
-define(['backbone','backbone-relational'], function(Backbone) {
+define(function(require) {
+  var  Backbone = require('backbone');
+                  require('backbone-relational');
   var PersonModel = Backbone.RelationalModel.extend({
     defaults: {
       _id: 0,

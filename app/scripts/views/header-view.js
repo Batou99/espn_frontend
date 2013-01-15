@@ -1,4 +1,8 @@
-define(['backbone','underscore','text!templates/header.html','models/cv-model'], function (Backbone,_,template,cvModel) {
+define(function(require) {
+  var  Backbone = require('backbone'),
+        cvModel = require('models/cv-model'),
+       template = require('text!templates/header.html');
+                  require('backbone-relational');
   var HeaderView = Backbone.View.extend({
 
     className: 'masthead',
