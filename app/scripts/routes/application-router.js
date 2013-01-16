@@ -24,7 +24,6 @@ define(function(require) {
       var personView = new PersonView({model: model.get('person')});
       $('#header').html(headerView.render().el);
       $('#header').append(personView.render().el);
-      console.log(model);
     },
 
     home: function() {
