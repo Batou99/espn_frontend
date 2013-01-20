@@ -2,6 +2,8 @@ define(function(require) {
   var Backbone = require('backbone'),
       HeaderView = require('views/header-view'),
       PersonView = require('views/person-view'),
+      SkillsetView = require('views/skillset-view'),
+      SkillsView = require('views/skills-view'),
       CvModel = require('models/cv-model'),
       PersonModel = require('models/person-model');
     
@@ -22,9 +24,10 @@ define(function(require) {
       model.fetchRelated('person');
       var headerView = new HeaderView({model: model});
       var personView = new PersonView({model: model.get('person')});
+      var skillsetView = new SkillsetView({model: model});
       $('#header').html(headerView.render().el);
       $('#header').append(personView.render().el);
-      console.log(model);
+      $('.marketing').html(skillsetView.render().el);
     },
 
     home: function() {

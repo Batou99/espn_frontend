@@ -1,13 +1,16 @@
 define(function(require) {
   var  Backbone = require('backbone'),
     PersonModel = require('models/person-model'),
-            rel = require('backbone-relational');
+            rel = require('relational');
 
   var CvModel = Backbone.RelationalModel.extend({
     defauls: {
       _id: 0,
       person: {},
-      updated_on: ""
+      updated_on: "",
+      skillset: [],
+      skills: [],
+  
     },
 
     idAttribute: '_id',
@@ -18,7 +21,8 @@ define(function(require) {
       type: Backbone.HasOne,
       key: 'person',
       relatedModel: PersonModel
-    }]
+    }
+    ]
   });
   return CvModel;
 });
