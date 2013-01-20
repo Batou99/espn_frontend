@@ -1,5 +1,10 @@
 requirejs.config({
   baseUrl: 'scripts',
+  shim: {
+    'backbone-relational': {
+      deps: ['backbone']
+    }
+  },
   paths: {
     app: 'app',
     jquery: 'vendor/jquery.min',
