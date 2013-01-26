@@ -25,11 +25,12 @@ define(function(require) {
       var headerView = new HeaderView({model: model});
       var personView = new PersonView({model: model.get('person')});
       var skillsetView = new SkillsetView({model: model});
-      var skillsView = new SkillsView({model: model});
       $('#header').html(headerView.render().el);
       $('#header').append(personView.render().el);
+<<<<<<< HEAD
       $('.marketing').html(skillsetView.render().el);
-      $('.skills').html(skillsView.render().el);
+=======
+>>>>>>> 4c7853b63131a8a4fccb11241254a5b494e00348
     },
 
     home: function() {

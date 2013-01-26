@@ -14,6 +14,6 @@
       "description": "Experience working with agile teams, scrum, iterative development and pair programming."
     }
   ],
-  "skills": ["Core Java","Multithreading","Ruby on Rails","Sinatra","Grape","Backbone","Yeoman"]
+  "skills": ["Core Java","Multithreading","Ruby on Rails","Sinatra","Grape","Backbone","Yeoman","MySQL","MySQL Cluster", "Teradata", "SQL Server"]
   
 }
