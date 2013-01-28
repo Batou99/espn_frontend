@@ -21,9 +21,9 @@ define(function(require) {
       cv.fetch();
     },
     loadCv: function(model,options) {
-      model.fetchRelated('person');
       var headerView = new HeaderView({model: model});
-      var personView = new PersonView({model: model.get('person')});
+      var personModel = new PersonModel(model.get('person'));
+      var personView = new PersonView({model: personModel});
       var skillsetView = new SkillsetView({model: model});
       var skillsView = new SkillsView({model: model});
       $('#header').html(headerView.render().el);

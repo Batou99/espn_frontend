@@ -1,9 +1,8 @@
 define(function(require) {
   var  Backbone = require('backbone'),
-    PersonModel = require('models/person-model'),
-            rel = require('relational');
+    PersonModel = require('models/person-model')
 
-  var CvModel = Backbone.RelationalModel.extend({
+  var CvModel = Backbone.Model.extend({
     defauls: {
       _id: 0,
       person: {},
@@ -17,12 +16,6 @@ define(function(require) {
 
     url: function() { return '/api/cvs/' + this.get('_id') + '.json' },
 
-    relations: [{
-      type: Backbone.HasOne,
-      key: 'person',
-      relatedModel: PersonModel
-    }
-    ]
   });
   return CvModel;
 });
