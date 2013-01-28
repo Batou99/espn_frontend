@@ -1,7 +1,12 @@
 {
   "_id": 1,
   "updated_on": "2013/01/31",
-  "person": 1,
+  "person": {
+    "name": "Lorenzo",
+    "surname": "Lopez-Sancho",
+    "email": "lorenzo.lopez@intec.es",
+    "profile": "Software developer and architect. Specialist in J2EE and Ruby on Rails. Deep knowledge in development, databases and systems administration."
+  },
   "skillset": [
     {
       "name": "Development",
