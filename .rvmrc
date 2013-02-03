@@ -1,1 +1,1 @@
-rvm use 1.9.3@cvApp --create
+rvm use 1.9.3@espn_frontend --create
