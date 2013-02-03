@@ -2,6 +2,7 @@ define (require) ->
   Backbone = require 'backbone'
   HeadlinesCollection = require 'cs!collections/headlines'
   LeaguesCollection = require 'cs!collections/leagues'
+  SidebarView = require 'cs!views/sidebar'
     
   class ApplicationRouter extends Backbone.Router
     router:
@@ -21,8 +22,7 @@ define (require) ->
       @headlines.fetch({success: @nba})
 
       @leagues = new LeaguesCollection()
-      # Only AJAX call for sidebar
-      @leagues.fetch({success: @loadSidebar})
+      new SidebarView({model: @leagues})
 
     nba: ->
       console.log @headlines
