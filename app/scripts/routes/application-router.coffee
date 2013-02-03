@@ -1,6 +1,7 @@
 define (require) ->
   Backbone = require 'backbone'
   HeadlinesCollection = require 'cs!collections/headlines'
+  HeadlinesView = require 'cs!views/headlines'
   LeaguesCollection = require 'cs!collections/leagues'
   SidebarView = require 'cs!views/sidebar'
     
@@ -18,8 +19,7 @@ define (require) ->
     initialize: ->
       _.bindAll(@,'nba','loadSidebar')
       @headlines = new HeadlinesCollection()
-      # Only AJAX call for main content (Until change of section)
-      @headlines.fetch({success: @nba})
+      new HeadlinesView({model: @headlines})
 
       @leagues = new LeaguesCollection()
       new SidebarView({model: @leagues})

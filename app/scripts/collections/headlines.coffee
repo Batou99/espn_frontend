@@ -6,13 +6,8 @@ define (require) ->
 
     initialize: (models,options) ->
       options ||= {}
-      @page = options.page ||  0
+      @_id = options.page ||  1
       @leagueName = options.leagueName || 'nba'
+      # Only AJAX call for main content (Until change of section)
 
-    url: -> "/#{@leagueName}/news/#{@page}"
-    parse: (data) ->
-      @status = data.status
-      @resultsCount = data.resultsCount
-      @resultsOffset = data.resultsOffset
-      @timestamp = data.timestamp
-      data.headlines
+    url: -> "/#{@leagueName}/teams/#{@_id}/news"

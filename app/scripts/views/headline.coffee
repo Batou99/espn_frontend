@@ -1,10 +1,10 @@
 define (require) ->
   Backbone = require 'backbone'
-  template = require 'text!templates/team.html'
+  template = require 'text!templates/headline.html'
 
-  class TeamView extends Backbone.View
+  class HeadlineView extends Backbone.View
     template: _.template(template)
-    tagName: 'li'
+    className: 'row-fluid'
 
     initialize: ->
       _.bindAll(@,"render")
