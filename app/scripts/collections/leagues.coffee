@@ -7,3 +7,4 @@ define (require) ->
     model: LeagueModel
 
     url: '/leagues_and_teams'
+
