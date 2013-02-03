@@ -1,6 +1,7 @@
 define (require) ->
   Backbone = require 'backbone'
   template = require 'text!templates/sidebar.html'
+  LeagueView = require 'cs!views/league'
 
   class SidebarView extends Backbone.View
     template: _.template(template)
@@ -13,7 +14,9 @@ define (require) ->
       @model.fetch()
 
     render: ->
-      console.log 'render'
       $('.sidebar-nav').html(@template())
+      _(@model.models).each (league) ->
+        lv = new LeagueView({model: league})
+        $('.nav-list').append(lv.render())
 
 

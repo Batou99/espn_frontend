@@ -5,4 +5,9 @@ define (require) ->
   class TeamsCollection extends Backbone.Collection
 
     model: TeamModel
+    comparator: (model) ->
+      model.get 'name'
+
+    initialize: ->
+      @sort()
 
