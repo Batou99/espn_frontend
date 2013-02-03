@@ -18,5 +18,6 @@ define (require) ->
 
     add_team: (team) ->  
       tv = new TeamView({model: team})
+      console.log team
       @$el.append(tv.render())
 

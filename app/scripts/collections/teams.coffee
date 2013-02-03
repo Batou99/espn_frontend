@@ -6,7 +6,7 @@ define (require) ->
 
     model: TeamModel
     comparator: (model) ->
-      model.get 'name'
+      model.get('location') + model.get('name')
 
     initialize: ->
       @sort()
