@@ -8,24 +8,17 @@ define (require) ->
   class ApplicationRouter extends Backbone.Router
     router:
       '': 'home'
-      '/#nba': 'nba'
-      '/#wnba': 'wnba'
-      '/#mens-college-basketball': 'mens-college-basketball'
-      '/#womens-college-basketball': 'womens-college-basketball'
 
     start: ->
       Backbone.history.start()
 
     initialize: ->
-      _.bindAll(@,'nba','loadSidebar')
+      _.bindAll(@,'home')
       headlines = new HeadlinesCollection()
       window.headlinesView = new HeadlinesView({model: headlines})
 
       @leagues = new LeaguesCollection()
       new SidebarView({model: @leagues})
 
-    nba: ->
-      console.log @headlines
+    home: ->
 
-    loadSidebar: ->
-      console.log @leagues
