@@ -3,7 +3,10 @@ define (require) ->
   TeamsCollection = require 'cs!collections/teams'
   class LeagueModel extends Backbone.Model
 
+    initialize: ->
+      @on("change",@load,@)
+
     parse: (data) ->
-      @teams = new TeamsCollection(data.teams)
+      @teams = new TeamsCollection(data.teams,{league: data.abbr})
       data
-      
+

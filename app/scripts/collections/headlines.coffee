@@ -6,8 +6,9 @@ define (require) ->
 
     initialize: (models,options) ->
       options ||= {}
-      @_id = options.page ||  1
+      @_id = options._id ||  1
       @leagueName = options.leagueName || 'nba'
       # Only AJAX call for main content (Until change of section)
+      @fetch()
 
     url: -> "/#{@leagueName}/teams/#{@_id}/news"

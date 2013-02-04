@@ -18,8 +18,8 @@ define (require) ->
 
     initialize: ->
       _.bindAll(@,'nba','loadSidebar')
-      @headlines = new HeadlinesCollection()
-      new HeadlinesView({model: @headlines})
+      headlines = new HeadlinesCollection()
+      window.headlinesView = new HeadlinesView({model: headlines})
 
       @leagues = new LeaguesCollection()
       new SidebarView({model: @leagues})

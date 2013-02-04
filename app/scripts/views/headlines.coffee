@@ -8,11 +8,8 @@ define (require) ->
       _.bindAll(@,"render")
       # Render sidebar when we have data
       @model.bind('reset',@render)
-      # Only AJAX call for sidebar
-      @model.fetch()
 
     render: ->
-      console.log 'rendering headlines',@model
       $('#headlines').empty()
       _(@model.models).each (headline) ->
         hv = new HeadlineView({model: headline})

@@ -8,6 +8,7 @@ define (require) ->
     comparator: (model) ->
       model.get('location') + model.get('name')
 
-    initialize: ->
+    initialize: (models,options) ->
       @sort()
+      @league = options.league
 
