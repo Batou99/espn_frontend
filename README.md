@@ -22,7 +22,7 @@ The client side application is written using javascript using these libraries
 * [RequireJS](http://requirejs.org/): Is used to load the libraries into the client using paralel loading when possible (see http://requirejs.org/docs/whyamd.html)
 * [RequireJS Text](git://github.com/requirejs/text.git): Used to require the templates into the views.
 * [RequireJS i18n](git://github.com/requirejs/i18n.git): Used to load internationalization resources.
-* [Jasmine](http://pivotal.github.com/jasmine/): The test framework for javascript
+* [Jasmine](https://jasmine.github.io/): The test framework for javascript
 * [Jasmine jQuery](https://github.com/velesin/jasmine-jquery): Library to test views using jasmine
 
 The server side is a web services based app written using ruby using this libraries:
